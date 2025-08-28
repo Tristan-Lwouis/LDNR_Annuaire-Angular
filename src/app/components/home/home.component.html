@@ -1,0 +1,124 @@
+<div class="home-container">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <mat-card class="hero-card">
+            <mat-card-content>
+                <div class="hero-content">
+                    <div class="hero-icon">
+                        <mat-icon>contacts</mat-icon>
+                    </div>
+                    <h1 class="hero-title">Annuaire</h1>
+                    <p class="hero-subtitle">Gérez vos contacts simplement et efficacement</p>
+                    <p class="hero-date">Aujourd'hui {{ aujourdhui | date : 'EEEE dd MMMM yyyy' }}
+                    </p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <!-- Features Section -->
+    <div class="features-section">
+        <h2 class="section-title">Fonctionnalités</h2>
+
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <mat-card class="feature-card">
+                <mat-card-content>
+                    <div class="feature-icon">
+                        <mat-icon>list</mat-icon>
+                    </div>
+                    <h3>Consulter</h3>
+                    <p>Visualisez tous vos contacts dans une liste claire et organisée</p>
+                    <button 
+                    mat-raised-button
+                    color="primary"
+                    routerLink="/lister-personne"
+                    routerLinkActive="active"   
+                    [routerLinkActiveOptions]="{exact: true}"
+                    >Liste</button>
+                </mat-card-content>
+            </mat-card>
+
+            <!-- Feature 2 -->
+            <mat-card class="feature-card">
+                <mat-card-content>
+                    <div class="feature-icon">
+                        <mat-icon>person_add</mat-icon>
+                    </div>
+                    <h3>Ajouter</h3>
+                    <p>Ajoutez facilement de nouveaux contacts</p>
+                    <button 
+                    mat-raised-button 
+                    color="primary" 
+                    routerLink="/ajouter-personne"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    >Ajouter un contact</button>
+                </mat-card-content>
+            </mat-card>
+
+            <!-- Feature 3 -->
+            <mat-card class="feature-card">
+                <mat-card-content>
+                    <div class="feature-icon">
+                        <mat-icon>edit</mat-icon>
+                    </div>
+                    <h3>Modifier</h3>
+                    <p>Modifiez les informations de vos contacts existants</p>
+                    <button 
+                    mat-raised-button 
+                    color="primary" 
+                    routerLink="/modifier-personne"
+                    routerLinkActive="active"
+                    [routerLinkActiveOptions]="{exact: true}"
+                    >Gérer les contacts</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <mat-card class="stats-card">
+            <mat-card-content>
+                <h2>Technologies utilisées</h2>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <mat-icon>code</mat-icon>
+                        <span>Angular 18</span>
+                    </div>
+                    <div class="tech-item">
+                        <mat-icon>palette</mat-icon>
+                        <span>Material Design</span>
+                    </div>
+                    <div class="tech-item">
+                        <mat-icon>storage</mat-icon>
+                        <span>TypeScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <mat-icon>data_usage</mat-icon>
+                        <span>RxJS</span>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <!-- Quick Actions -->
+    <div class="quick-actions">
+        <h2>Actions rapides</h2>
+        <div class="actions-grid">
+            <button mat-raised-button color="primary" routerLink="/ajouter-personne" class="action-button">
+                <mat-icon>add</mat-icon>
+                Nouveau contact
+            </button>
+            <button mat-raised-button color="accent" routerLink="/lister-personne" class="action-button">
+                <mat-icon>list</mat-icon>
+                Voir tous les contacts
+            </button>
+            <button mat-raised-button color="warn" routerLink="/a-propos" class="action-button">
+                <mat-icon>info</mat-icon>
+                À propos
+            </button>
+        </div>
+    </div>
+</div>

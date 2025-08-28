@@ -1,0 +1,8 @@
+@startuml Cas d'utilisations
+
+(Ajouter un contact)
+(Modifier un contact)
+(Supprimer un contact)
+(Voir la liste des contacts)
+
+@enduml

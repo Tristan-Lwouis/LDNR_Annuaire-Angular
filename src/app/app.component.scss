@@ -1,0 +1,39 @@
+div {
+    color: #3498db;
+}
+
+#logo {
+    width: 4em;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.main-content {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    border-bottom: 3px solid white;
+    font-weight: 500;
+}
+
+mat-toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
