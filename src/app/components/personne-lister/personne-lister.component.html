@@ -1,1 +1,19 @@
-<p>personne-lister works!</p>
+<div *ngFor="let personne of personnes">
+{{ personne.prenom }} {{ personne.nom }} - {{ personne.tel }}
+</div>
+
+<!-- track obligation pour @for donne la proprieté id à chaque élément
+Permet d'identifier chaque élément de manière unique -->
+@if(personnes.length > 1) {
+<p>Il y a {{ personnes.length }} contacts enregistrés</p>
+} @else if(personnes.length == 1) {
+<p>Il y a un contact enregistré</p>
+} @else {
+<p>Il n'y a pas de contact enregistré</p>
+}
+
+@for (personne of personnes; track personne.id) {
+<div>
+    {{ personne.nom }} {{ personne.prenom }} {{ personne.tel }}
+</div>
+}
